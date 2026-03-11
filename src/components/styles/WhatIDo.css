@@ -12,11 +12,12 @@
   z-index: 9;
 }
 .what-box:first-child {
-  width: 35%;
+  width: 30%;
   display: flex;
   justify-content: flex-start;
   position: relative;
-  z-index: 9;
+  z-index: 99;
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
 }
 .what-box-spacer {
   display: flex;
@@ -24,12 +25,12 @@
   pointer-events: none;
 }
 .what-box:last-child {
-  width: 35%;
+  width: 32%;
   max-width: 450px;
   display: flex;
   justify-content: flex-end;
   position: relative;
-  z-index: 9;
+  z-index: 99;
 }
 .what-box h2 {
   font-size: calc(3.5vw + 25px);

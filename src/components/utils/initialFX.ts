@@ -20,10 +20,10 @@ export function initialFX() {
     delay: 1,
   });
 
-  // Small delay to ensure WebFonts load before splitting text
-  setTimeout(() => {
+  // Wait strictly for fonts to load before splitting text to prevent GSAP miscalculations
+  document.fonts.ready.then(() => {
     runTextAnimations();
-  }, 100);
+  });
 }
 
 function runTextAnimations() {
