@@ -19,7 +19,7 @@ const imageUrls = [
   import.meta.env.BASE_URL + "images/numpy.webp",
   import.meta.env.BASE_URL + "images/scikit.webp",
   import.meta.env.BASE_URL + "images/flask.webp",
-  import.meta.env.BASE_URL + "images/powerbi.webp",
+  import.meta.env.BASE_URL + "images/react.webp",
   import.meta.env.BASE_URL + "images/html.webp",
   import.meta.env.BASE_URL + "images/css.webp",
   import.meta.env.BASE_URL + "images/github.webp",

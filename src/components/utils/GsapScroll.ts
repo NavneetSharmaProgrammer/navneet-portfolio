@@ -90,7 +90,7 @@ export function setCharTimeline(
         .to(monitor.material, { opacity: 1, duration: 0.8, delay: 3.2 }, 0)
         .to(screenLight.material, { opacity: 1, duration: 0.8, delay: 4.5 }, 0)
         .fromTo(
-          ".what-box-in",
+          ".what-box",
           { display: "none" },
           { display: "flex", duration: 0.1, delay: 6 },
           0
@@ -122,12 +122,12 @@ export function setCharTimeline(
     if (character) {
       const tM2 = gsap.timeline({
         scrollTrigger: {
-          trigger: ".what-box-in",
+          trigger: ".what-box",
           start: "top 70%",
           end: "bottom top",
         },
       });
-      tM2.to(".what-box-in", { display: "flex", duration: 0.1, delay: 0 }, 0);
+      tM2.to(".what-box", { display: "flex", duration: 0.1, delay: 0 }, 0);
     }
   }
 }
