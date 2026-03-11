@@ -46,21 +46,15 @@ a:hover {
   color: var(--accentColor);
 }
 
-/* main starts invisible; GSAP's initialFX() fades it in to prevent flash */
-main {
+/* main starts invisible; GSAP's initialFX() handles the fade-in via script */
+main.main-body {
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 1s ease-out;
 }
 
-.main-active {
-  opacity: 0;
-  animation: fadeIn 0.8s ease-out 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(4px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* Fallback class applied by LoadingProvider React state if all else fails */
+main.main-active {
+  opacity: 1 !important;
 }
 
 body {

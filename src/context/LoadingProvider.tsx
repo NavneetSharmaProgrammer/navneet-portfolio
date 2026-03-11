@@ -17,6 +17,7 @@ export const LoadingContext = createContext<LoadingType | null>(null);
 export const LoadingProvider = ({ children }: PropsWithChildren) => {
   const [isLoading, setIsLoading] = useState(true);
   const [loading, setLoading] = useState(0);
+  const [isRevealed, setIsRevealed] = useState(false);
 
   const value = {
     isLoading,
@@ -30,10 +31,11 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
       if (module.initialFX) {
         module.initialFX();
       }
+      setIsRevealed(true);
       setIsLoading(false);
     }).catch(() => {
-      // If even initialFX fails, still reveal the page
-      document.getElementsByTagName("main")[0]?.classList.add("main-active");
+      // If even initialFX fails, still reveal the page reliably via React state
+      setIsRevealed(true);
       setIsLoading(false);
     });
   };
@@ -45,7 +47,7 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
     }
   }, [loading, isLoading]);
 
-  // Fallback: if model never loads (e.g. 404 on deployed site), reveal after 8s
+  // Fallback: if model never loads, reveal after 8s
   useEffect(() => {
     const fallback = setTimeout(() => {
       if (isLoading) {
@@ -54,11 +56,11 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
       }
     }, 8000);
     return () => clearTimeout(fallback);
-  }, []);
+  }, [isLoading]);
 
   return (
     <LoadingContext.Provider value={value as LoadingType}>
-      <main className="main-body">{children}</main>
+      <main className={`main-body ${isRevealed ? 'main-active' : ''}`}>{children}</main>
     </LoadingContext.Provider>
   );
 };

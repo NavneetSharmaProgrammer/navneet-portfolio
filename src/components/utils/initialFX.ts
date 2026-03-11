@@ -5,12 +5,28 @@ import { smoother } from "../Navbar";
 export function initialFX() {
   document.body.style.overflowY = "auto";
   smoother.paused(false);
-  document.getElementsByTagName("main")[0].classList.add("main-active");
+  document.getElementsByTagName("main")[0]?.classList.add("main-active");
+  
+  // Force main body to become visible
+  gsap.to(".main-body", {
+    opacity: 1,
+    duration: 1,
+    ease: "power2.inOut",
+  });
+
   gsap.to("body", {
     backgroundColor: "#0a0e17",
     duration: 0.5,
     delay: 1,
   });
+
+  // Small delay to ensure WebFonts load before splitting text
+  setTimeout(() => {
+    runTextAnimations();
+  }, 100);
+}
+
+function runTextAnimations() {
 
   const landingText = new SplitText(
     [".landing-info h3", ".landing-intro h2", ".landing-intro h1"],
