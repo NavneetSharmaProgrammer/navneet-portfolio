@@ -122,27 +122,21 @@
 .character-model::after {
   content: "";
   width: 100vw;
-  height: 250px;
+  height: 100px;
   background-image: linear-gradient(to bottom,
       transparent,
-      var(--backgroundColor) 70%);
+      var(--backgroundColor) 90%);
   bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 9;
+  z-index: 1;
   position: absolute;
+  pointer-events: none;
 }
 
 .character-model::before {
   content: "";
-  width: 100vw;
-  height: 700px;
-  background-color: var(--backgroundColor);
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 9;
-  position: absolute;
+  display: none;
 }
 
 .character-loaded .character-rim {
@@ -337,7 +331,7 @@ h2.landing-info-h2 {
   .character-model {
     height: 100vh;
     bottom: 0;
-    z-index: 11;
+    z-index: 0;
     position: fixed;
   }
 

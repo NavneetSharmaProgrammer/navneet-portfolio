@@ -8,8 +8,9 @@
   min-height: 100vh;
   width: var(--cWidth);
   margin: auto;
-  padding: 100px 0;
+  padding: 150px 0;
   box-sizing: border-box;
+  z-index: 10;
 }
 
 .about-me {
@@ -25,6 +26,8 @@
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
+  pointer-events: auto;
+  z-index: 50;
 }
 
 .about-me::before {
@@ -92,8 +95,10 @@
     width: var(--cWidth);
     justify-content: right;
     max-width: 1920px;
-    height: 100vh;
-    padding: 0px 5vw;
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 5vw;
+    margin-top: 100vh; /* Strictly push below the landing section */
   }
   .about-me {
     width: 45%;
