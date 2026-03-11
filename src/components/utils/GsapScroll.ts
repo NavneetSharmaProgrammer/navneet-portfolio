@@ -143,34 +143,29 @@ export function setAllTimeline() {
     },
   });
   careerTimeline
+  careerTimeline
     .fromTo(
-      ".career-timeline",
-      { maxHeight: "10%" },
-      { maxHeight: "100%", duration: 0.5 },
-      0
-    )
-
-    .fromTo(
-      ".career-timeline",
-      { opacity: 0 },
-      { opacity: 1, duration: 0.1 },
+      ".career-timeline-container",
+      { opacity: 0, scaleY: 0.9 },
+      { opacity: 1, scaleY: 1, duration: 0.5 },
       0
     )
     .fromTo(
-      ".career-info-box",
-      { opacity: 0 },
-      { opacity: 1, stagger: 0.1, duration: 0.5 },
-      0
+      ".career-item",
+      { opacity: 0, x: -30 },
+      { opacity: 1, x: 0, stagger: 0.2, duration: 0.6 },
+      0.2
     )
     .fromTo(
-      ".career-dot",
-      { animationIterationCount: "infinite" },
+      ".career-dot2",
+      { scale: 0, opacity: 0 },
       {
-        animationIterationCount: "1",
-        delay: 0.3,
-        duration: 0.1,
+        scale: 1,
+        opacity: 1,
+        stagger: 0.2,
+        duration: 0.3,
       },
-      0
+      0.2
     );
 
   if (window.innerWidth > 1024) {
