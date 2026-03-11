@@ -1,0 +1,144 @@
+.contact-section {
+  margin: auto;
+  padding-bottom: 100px;
+  margin-top: 100px;
+  position: relative;
+  z-index: 2;
+  /* Massive top padding to ensure it clearly separates from above elements */
+  padding-top: 100px;
+}
+
+.contact-section h3 {
+  font-size: clamp(3rem, 6vw, 4rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 60px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: rgba(10, 15, 22, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.contact-box:hover {
+  border-color: rgba(94, 234, 212, 0.3);
+  transform: translateY(-5px);
+}
+
+.contact-flex h4 {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+  color: var(--accentColor);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-flex p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #d1d5db;
+}
+
+.contact-flex p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-flex p a {
+  transition: color 0.3s ease;
+}
+
+.contact-flex p a:hover {
+  color: white;
+}
+
+a.contact-social {
+  font-size: 22px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #d1d5db;
+  transition: all 0.3s ease;
+}
+
+a.contact-social:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+a.contact-social:hover {
+  color: var(--accentColor);
+  padding-left: 10px;
+  border-color: var(--accentColor);
+}
+
+.contact-box h2 {
+  font-weight: 300;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  line-height: 1.4;
+  margin: 0 0 30px 0;
+  color: #e5e7eb;
+}
+
+.contact-box h2 > span {
+  color: var(--accentColor);
+  font-weight: 600;
+}
+
+.contact-box h5 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9ca3af;
+  margin-top: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  .contact-flex {
+    flex-wrap: wrap;
+  }
+  .contact-box {
+    flex: 1 1 45%;
+  }
+  .contact-box:last-child {
+    flex: 1 1 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contact-box {
+    padding: 30px;
+  }
+  .contact-section {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+  .contact-container {
+    padding: 0 20px;
+  }
+}

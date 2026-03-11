@@ -1,0 +1,21 @@
+node.exe : ProcessError: fatal: a branch named 
+'gh-pages' already exists
+At C:\Program Files\nodejs\npx.ps1:29 char:3
++   & $NODE_EXE $NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified:     
+(ProcessError: f... already exists:Str    ing) 
+[], RemoteException
+    + FullyQualifiedErrorId : NativeCommand    
+Error
+ 
+
+    at ChildProcess.<anonymous> (C:\Users\navne\Na
+vneet-portfolio-main\node_modules\gh-pages\lib\git
+.js:42:16)
+    at ChildProcess.emit (node:events:518:28)
+    at maybeClose 
+(node:internal/child_process:1101:16)
+    at ChildProcess._handle.onexit 
+(node:internal/child_process:304:5)
+
