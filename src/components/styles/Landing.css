@@ -3,7 +3,7 @@
   max-width: var(--cMaxWidth);
   margin: auto;
   position: relative;
-  height: var(--vh);
+  height: 100vh;
 }
 
 .landing-container {

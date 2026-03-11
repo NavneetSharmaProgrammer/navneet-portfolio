@@ -81,7 +81,7 @@ body {
 
 .container1 {
   width: var(--cWidth);
-  height: var(--vh);
+  height: 100vh;
   margin: auto;
   position: relative;
 }
