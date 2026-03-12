@@ -9,6 +9,7 @@ import WhatIDo from "./WhatIDo";
 import Projects from "./Projects";
 import Work from "./Work";
 import AiMlLifeCycle from "./AiMlLifeCycle";
+import AiDsVenn from "./AiDsVenn";
 import setSplitText from "./utils/splitText";
 
 const TechStack = lazy(() => import("./TechStack"));
@@ -49,6 +50,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
                 <TechStack />
               </Suspense>
             )}
+            <AiDsVenn />
             <AiMlLifeCycle />
             <Contact />
           </div>

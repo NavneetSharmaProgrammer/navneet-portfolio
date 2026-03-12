@@ -1,0 +1,143 @@
+.venn-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #050810;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.venn-container {
+  width: var(--cWidth);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.venn-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.venn-tag {
+  color: #34d399;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.venn-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.venn-title .highlight {
+  color: #34d399;
+}
+
+.venn-content-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.venn-3d-wrapper {
+  position: relative;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.venn-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(52, 211, 153, 0.3);
+  transform: translateX(10px);
+}
+
+.info-card h3 {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.info-card h3 .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.info-card p {
+  color: #94a3b8;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.label-html {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: 6px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 1024px) {
+  .venn-content-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .venn-3d-wrapper {
+    height: 450px;
+  }
+}
+
+@media (max-width: 640px) {
+  .venn-3d-wrapper {
+    height: 350px;
+  }
+  
+  .venn-title {
+    font-size: 2.2rem;
+  }
+}
